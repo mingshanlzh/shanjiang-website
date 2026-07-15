@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://mingshanlzh.github.io/shanjiang-website/sitemap.xml
+Sitemap: https://shanjiang.info/shanjiang-website/sitemap.xml
