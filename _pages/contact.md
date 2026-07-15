@@ -10,11 +10,8 @@ nav_order: 8
 The best way to reach me is by email at **[shan.jiang@mq.edu.au](mailto:shan.jiang@mq.edu.au)**. You can also use the form below — messages are delivered straight to my inbox.
 
 
-{% comment %} To activate the form: replace FORMSPREE_ENDPOINT below with your
-Formspree endpoint (https://formspree.io/f/xxxxxxx). Until then the form will not
-submit — the mailto link above always works. {% endcomment %}
 
-<form action="FORMSPREE_ENDPOINT" method="POST" style="max-width: 34rem;">
+<form action="https://formspree.io/f/xojgjvew" method="POST" style="max-width: 34rem;">
   <div style="margin-bottom: 1rem;">
     <label for="name" style="display:block; margin-bottom:.35rem; font-weight:600;">Name</label>
     <input type="text" id="name" name="name" required
