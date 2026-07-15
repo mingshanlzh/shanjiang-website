@@ -147,6 +147,29 @@
   {% endif %}
 
 <script>
+  // Two-state (light/dark only) theme toggle. Overrides the theme's 3-state cycle
+  // by rebinding the toggle button and forcing a concrete data-theme-setting.
+  (function () {
+    var d = document.documentElement;
+    function setTheme(t) {
+      localStorage.setItem("theme", t);
+      d.setAttribute("data-theme", t);
+      d.setAttribute("data-theme-setting", t);
+    }
+    function current() { return localStorage.getItem("theme") === "dark" ? "dark" : "light"; }
+    setTheme(current()); // never leave it on "system"
+    document.addEventListener("DOMContentLoaded", function () {
+      var btn = document.getElementById("light-toggle");
+      if (!btn) return;
+      var clone = btn.cloneNode(true);
+      btn.parentNode.replaceChild(clone, btn);
+      clone.addEventListener("click", function () {
+        setTheme(current() === "dark" ? "light" : "dark");
+      });
+    });
+  })();
+</script>
+<script>
   // DOI dropdown toggle for publication entries (mirrors Abs/Bib behaviour)
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a.doi-toggle").forEach(function (link) {
