@@ -3,7 +3,7 @@ layout: page
 permalink: /teaching/
 title: teaching & service
 description: Teaching, editorial roles, and professional service.
-nav: true
+nav: false
 nav_order: 6
 ---
 

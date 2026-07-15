@@ -1,6 +1,6 @@
 # Social media links and usernames — displayed in the order defined here.
 # See jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-cv_pdf: /assets/pdf/Shan_Jiang_CV.pdf # path to your CV PDF file
+cv_pdf: # CV PDF is gated on the CV page
 email: shan.jiang@mq.edu.au
 scholar_userid: TeSuUycAAAAJ # Google Scholar ID
 orcid_id: 0000-0003-1015-1278
