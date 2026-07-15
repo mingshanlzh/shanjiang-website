@@ -1,0 +1,10 @@
+# Social media links and usernames — displayed in the order defined here.
+# See jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
+cv_pdf: /assets/pdf/Shan_Jiang_CV.pdf # path to your CV PDF file
+email: shan.jiang@mq.edu.au
+scholar_userid: TeSuUycAAAAJ # Google Scholar ID
+orcid_id: 0000-0003-1015-1278
+github_username: mingshanlzh
+x_username: ShanJiangHE
+research_gate_profile: Shan-Jiang-46
+rss_icon: true

@@ -1,0 +1,181 @@
+cv:
+  name: Shan Jiang
+  label: Health Economist
+  email: shan.jiang@mq.edu.au
+  location: Sydney, Australia
+  image: ""
+  summary: >
+    Health economist specialising in equity-informed economic evaluation, distributional
+    and dynamic distributional cost-effectiveness analysis (DCEA / D-DCEA), the economics
+    of genomics and precision medicine, health technology assessment, and stated-preference
+    methods.
+
+  social_networks:
+    - network: Google Scholar
+      username: TeSuUycAAAAJ
+    - network: ORCID
+      username: 0000-0003-1015-1278
+    - network: GitHub
+      username: mingshanlzh
+    - network: X
+      username: ShanJiangHE
+
+  sections:
+    Education:
+      - institution: Macquarie University
+        location: Sydney, Australia
+        url: https://www.mq.edu.au/
+        area: Economics (Thesis — Dynamic Methods for Distributional Cost-Effectiveness Analysis)
+        studyType: PhD (Candidate)
+        start_date: 2024
+        end_date: present
+        highlights:
+          - "Supervisors: A/Prof Yuanyuan Gu and A/Prof Bonny Parkinson, Macquarie University Centre for the Health Economy (MUCHE)"
+
+      - institution: Shanghai Jiao Tong University
+        location: Shanghai, China
+        url: http://www.sjtu.edu.cn/
+        area: Economics
+        studyType: MSc
+        start_date: 2009
+        end_date: 2012
+        courses: "Microeconomics, Macroeconomics, Econometrics, Regulatory Economics, Experimental Economics, Industrial Organization, Monetary Theory"
+
+      - institution: Shanghai University
+        location: Shanghai, China
+        url: http://en.shu.edu.cn/
+        area: Management Science and Engineering
+        studyType: BSc
+        start_date: 2004
+        end_date: 2008
+        score: "GPA 90/100"
+
+    Additional Training:
+      - institution: Massachusetts Institute of Technology (MIT)
+        location: Cambridge, MA, USA
+        area: Discrete Choice Modelling (Instructor — Prof. Moshe Ben-Akiva)
+        studyType: Trainee
+        start_date: 2017
+        end_date: 2017
+
+      - institution: Western Regional Training Center
+        location: Vancouver, BC, Canada
+        area: Health Service Research
+        studyType: Research Trainee
+        start_date: 2013
+        end_date: 2013
+
+      - institution: University of British Columbia
+        location: Vancouver, BC, Canada
+        area: Population and Public Health
+        studyType: Postgraduate coursework and research training
+        start_date: 2012
+        end_date: 2016
+
+      - institution: Columbia University
+        location: New York, NY, USA
+        area: Mailman School of Public Health
+        studyType: Graduate Exchange Program
+        start_date: 2011
+        end_date: 2011
+
+    Experience:
+      - company: Macquarie University Centre for the Health Economy (MUCHE)
+        position: Senior Research Assistant
+        location: Sydney, Australia
+        start_date: 2024-02-01
+        end_date: present
+        summary: Supporting multiple health economics research projects, conducting data analysis, contributing to economic evaluations and health policy research, and assisting with manuscript preparation and project management.
+
+      - company: Shanghai Health Development Research Center
+        position: Adjunct Research Fellow (2025–); Health Economist, full-time (2021–2023)
+        location: Shanghai, China
+        start_date: 2021
+        end_date: present
+        summary: Health technology assessment, health equity, cost-effectiveness analysis, and health policy evaluation. Supervisor — Dr Haiyin Wang, Director of HTA.
+
+      - company: Independent Health Economics Consultant & Science Communicator
+        position: Independent HTA Consultant
+        location: Shanghai, China
+        start_date: 2016
+        end_date: 2021
+        summary: Health technology assessment, health policy evaluation, systematic review, medical decision analysis, infectious disease analysis, and clinical trial design.
+
+      - company: University of British Columbia
+        position: Research and Teaching Assistant
+        location: Vancouver, BC, Canada
+        start_date: 2012
+        end_date: 2016
+
+    Grants, Awards & Fellowships:
+      - title: Research Visiting Fellowship (full funding)
+        awarder: Brocher Foundation, Geneva, Switzerland
+        date: 2026
+      - title: Best Paper of the Year 2024 (only one worldwide)
+        awarder: Value in Health editorial board
+        date: 2025
+      - title: Student of the Year
+        awarder: Australian Institute of Health Innovation (AIHI), Macquarie University
+        date: 2025
+      - title: Co-PI — Health Equity for the Chinese Health Insurance System
+        awarder: Shanghai Health Development Research Center
+        date: 2021–2023
+      - title: Co-PI (external) — Patient Preferences for Medical Services in Shanghai
+        awarder: China Hospital Development Institute, Shanghai Jiao Tong University
+        date: 2019–2021
+
+    Scholarships:
+      - title: MUAPS PhD Scholarship with top-up (AUD $35,000 + $20,000 p.a.), plus AUD $12,500 travel grants and AUD $6,000 PGRF
+        awarder: Macquarie University
+        date: 2024–2026
+      - title: Four-Year PhD Fellowship (CAD $25,000 p.a.) and International Tuition Award
+        awarder: University of British Columbia
+        date: 2012–2016
+      - title: Visiting Scholarship on Discrete Choice Analysis
+        awarder: Massachusetts Institute of Technology
+        date: 2017
+      - title: Graduate Student Scholarship (top 5%, full tuition)
+        awarder: Shanghai Jiao Tong University
+        date: 2009
+
+    Research Visits:
+      - title: Centre for Health Economics, University of York
+        awarder: York, United Kingdom
+        date: 2026
+      - title: Danish Centre for Health Economics (DaCHE), University of Southern Denmark
+        awarder: Odense, Denmark
+        date: 2024, 2026
+      - title: School of Public Health, Fudan University
+        awarder: Shanghai, China
+        date: 2025, 2026
+
+    Professional Service & Leadership:
+      - title: Section Editor, Health Economics and Outcomes Research (HEOR)
+        awarder: Advances in Therapy
+        date: present
+      - title: Editorial Board
+        awarder: Clinical Drug Investigation; Oncology and Therapy
+        date: present
+      - title: Convenor, Health Equity Special Interest Group
+        awarder: Australian Health Economics Society
+        date: 2025–present
+      - title: Secretary, Health Preference Research SIG
+        awarder: Australian Health Economics Society
+        date: 2024–2025
+      - title: Co-founder, Chinese Health Preference Research Network
+        awarder: China
+        date: 2019–present
+
+    Skills:
+      - name: Health Economic Modelling
+        keywords: "Markov & microsimulation models, discrete event simulation, DCEA, decision-analytic modelling"
+      - name: Statistical & Econometric Methods
+        keywords: "Discrete choice experiments, mixed logit, survival analysis, Bayesian inference, causal inference"
+      - name: Software
+        keywords: "R (tidyverse, heemod, hesim, flexsurv, simmer), Stata, LaTeX, Quarto, Git"
+
+    Languages:
+      - name: Mandarin Chinese
+        summary: "Native speaker"
+      - name: English
+        summary: "Fluent"
