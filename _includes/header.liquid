@@ -120,7 +120,7 @@
             <!-- Search -->
             <li class="nav-item">
               <button id="search-toggle" type="button" title="Search" aria-label="Open search">
-                <span class="nav-link"><i class="fa-solid fa-magnifying-glass"></i> <kbd class="search-hint">Ctrl K</kbd></span>
+                <span class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></span>
               </button>
             </li>
           {% endif %}
@@ -170,6 +170,15 @@
   })();
 </script>
 <script>
+  // Keep the search button icon-only. The al_search plugin rewrites this button on
+  // Macs to add a keyboard hint (on "readystatechange"); DOMContentLoaded fires after
+  // that, so resetting here removes the hint on every platform.
+  document.addEventListener("DOMContentLoaded", function () {
+    var searchLabel = document.querySelector("#search-toggle .nav-link");
+    if (searchLabel) searchLabel.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+  });
+</script>
+<script>
   // DOI dropdown toggle for publication entries (mirrors Abs/Bib behaviour)
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a.doi-toggle").forEach(function (link) {
@@ -184,12 +193,28 @@
   });
 </script>
 <style>
-  kbd.search-hint { font-size: 0.62rem; padding: 0.05rem 0.32rem; border-radius: 4px;
-    border: 1px solid var(--global-divider-color); opacity: 0.65; vertical-align: middle; }
   .doi-content { max-height: 0; overflow: hidden; transition: all 0.15s ease; font-size: 0.875rem; }
   .doi-content.open { max-height: 20em; }
   .doi-content p { line-height: 1.4em; margin: 10px; }
   div.doi-content { border: dashed 1px var(--global-divider-color); }
   div.doi-content.open { border-color: var(--global-text-color); }
 </style>
+{% comment %}
+  In-site editor for news and blog posts (assets/js/site-editor.js).
+  Loaded on the news page, the blog pages, single news/post pages and /admin/.
+  Visitors see nothing; controls appear only after the owner signs in on /admin/.
+{% endcomment %}
+{% if site.site_editor.repo %}
+  {% if page.site_editor or page.collection == 'posts' or page.collection == 'news' %}
+    <script>
+      window.SITE_EDITOR_CONFIG = {
+        repo: {{ site.site_editor.repo | jsonify }},
+        branch: {{ site.site_editor.branch | default: 'main' | jsonify }},
+        adminUrl: {{ '/admin/' | relative_url | jsonify }},
+        page: { kind: {{ page.site_editor | default: page.collection | jsonify }}, path: {{ page.path | jsonify }} }
+      };
+    </script>
+    <script src="{{ '/assets/js/site-editor.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% endif %}
+{% endif %}
 </header>
