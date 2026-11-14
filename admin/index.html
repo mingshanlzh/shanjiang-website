@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> site editor | Shan Jiang </title> <meta name="author" content="Shan Jiang"> <meta name="description" content="Add, edit and delete news items and blog posts."> <meta name="keywords" content="health economics, distributional cost-effectiveness analysis, DCEA, health technology assessment, genomics, discrete choice experiment, Deakin Health Economics, Deakin University"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> publish | Shan Jiang </title> <meta name="author" content="Shan Jiang"> <meta name="description" content="How to add news items and blog posts to this site."> <meta name="keywords" content="health economics, distributional cost-effectiveness analysis, DCEA, health technology assessment, genomics, discrete choice experiment, Deakin Health Economics, Deakin University"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
   :root {
     --max-content-width: 930px;
   }
@@ -60,7 +60,95 @@
         adminUrl: "/admin/",
         page: { kind: "admin", path: "_pages/admin.md" }
       };
-    </script> <script src="/assets/js/site-editor.js?v=1794646233" defer></script> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">site editor</h1> <p class="post-description">Add, edit and delete news items and blog posts.</p> </header> <article> <div id="site-editor-admin"> <p>Loading the editor…</p> </div> <noscript>The site editor needs JavaScript.</noscript> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Shan Jiang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. Last updated: November 14, 2026. </div> </footer> <script>
+    </script> <script src="/assets/js/site-editor.js?v=1794646440" defer></script> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">publish</h1> <p class="post-description">How to add news items and blog posts to this site.</p> </header> <article> <style>
+  .pub-box { max-width: 40rem; padding: 1rem 1.25rem; border: 1px solid var(--global-divider-color); border-radius: 10px; margin: 0.75rem 0 1.75rem; }
+  .pub-box label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+  .pub-box input { width: 100%; padding: 0.55rem 0.75rem; border: 1px solid var(--global-divider-color); border-radius: 8px; background: var(--global-bg-color); color: var(--global-text-color); }
+  .pub-hint { font-size: 0.9rem; opacity: 0.8; margin: 0.4rem 0 0.9rem; }
+  .pub-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .pub-btn { display: inline-block; padding: 0.55rem 1.2rem; border-radius: 8px; background: var(--global-theme-color); color: #fff !important; font-weight: 600; text-decoration: none !important; }
+  .pub-btn:hover { opacity: 0.9; }
+  details.pub-optional { margin-top: 2.25rem; }
+  details.pub-optional summary { cursor: pointer; font-weight: 600; }
+</style> <p>New news items and blog posts are added through GitHub. Each button opens GitHub’s editor with a new file that already has the template and today’s date in it.</p> <div class="pub-box"> <label for="pub-title">Title (optional)</label> <input id="pub-title" type="text" autocomplete="off" placeholder="e.g. Notes from AHES 2026"> <p class="pub-hint">Used for the file name, and as the title of a blog post. You can also change it later in GitHub.</p> <div class="pub-buttons"> <a id="pub-new-post" class="pub-btn" href="https://github.com/mingshanlzh/shanjiang-website/new/main/_posts" target="_blank" rel="noopener">New blog post</a> <a id="pub-new-news" class="pub-btn" href="https://github.com/mingshanlzh/shanjiang-website/new/main/_news" target="_blank" rel="noopener">New news item</a> </div> </div> <h3 id="publishing-in-four-steps">Publishing in four steps</h3> <ol> <li>Click <strong>New blog post</strong> or <strong>New news item</strong>. GitHub opens in a new tab. Sign in to GitHub if it asks.</li> <li>Replace the placeholder text below the second <code class="language-plaintext highlighter-rouge">---</code> line with your own. For a blog post, also change the <code class="language-plaintext highlighter-rouge">title</code> and <code class="language-plaintext highlighter-rouge">description</code> lines at the top.</li> <li>Click <strong>Commit changes…</strong> at the top right, then <strong>Commit changes</strong> in the box that opens.</li> <li>Wait about four minutes, then refresh the <a href="/blog/">blog</a> or <a href="/news/">news</a> page. You can watch the build on <a href="https://github.com/mingshanlzh/shanjiang-website/actions" rel="external nofollow noopener" target="_blank">GitHub Actions</a>. A green tick means it is live.</li> </ol> <h3 id="other-tasks">Other tasks</h3> <ul> <li> <strong>Edit or delete a post.</strong> Open the <a href="https://github.com/mingshanlzh/shanjiang-website/tree/main/_posts" rel="external nofollow noopener" target="_blank">blog posts folder</a> or the <a href="https://github.com/mingshanlzh/shanjiang-website/tree/main/_news" rel="external nofollow noopener" target="_blank">news folder</a> and click the file. The pencil icon edits it, and the <strong>⋯</strong> menu has <strong>Delete file</strong>. Then commit as in step 3.</li> <li> <strong>Add a picture.</strong> <a href="https://github.com/mingshanlzh/shanjiang-website/upload/main/assets/img" rel="external nofollow noopener" target="_blank">Upload it to the images folder</a>, then put <code class="language-plaintext highlighter-rouge">![What the picture shows](/assets/img/your-file.jpg)</code> on its own line in the post.</li> <li> <strong>Formatting.</strong> <code class="language-plaintext highlighter-rouge">**bold**</code>, <code class="language-plaintext highlighter-rouge">*italic*</code>, <code class="language-plaintext highlighter-rouge">[link text](https://example.com)</code> and <code class="language-plaintext highlighter-rouge">## Subheading</code>. Leave a blank line between paragraphs.</li> <li> <strong>Dates.</strong> Keep the date as today or earlier. A post dated in the future stays hidden until the site is rebuilt after that date.</li> </ul> <details class="pub-optional" id="pub-editor"> <summary>Optional: add and edit on this page instead (needs a one-time sign-in)</summary> <div id="site-editor-admin"> <p>Loading the editor…</p> </div> </details> <noscript>The buttons and the editor need JavaScript. You can still add files through the GitHub folders linked above.</noscript> <script>
+  (function () {
+    var REPO = "mingshanlzh/shanjiang-website";
+    var BRANCH = "main";
+
+    // Today's date in Melbourne time (the site's time zone), as YYYY-MM-DD.
+    function today() {
+      var d = new Date();
+      try {
+        var parts = {};
+        new Intl.DateTimeFormat("en-AU", { timeZone: "Australia/Melbourne", year: "numeric", month: "2-digit", day: "2-digit" })
+          .formatToParts(d)
+          .forEach(function (p) { parts[p.type] = p.value; });
+        if (parts.year && parts.month && parts.day) return parts.year + "-" + parts.month + "-" + parts.day;
+      } catch (e) {}
+      return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+    }
+
+    // Accents are removed by deleting the combining marks left after NFKD normalisation.
+    var MARKS = new RegExp("[" + String.fromCharCode(0x300) + "-" + String.fromCharCode(0x36f) + "]", "g");
+    function slug(text, fallback) {
+      var s = String(text || "").normalize("NFKD").replace(MARKS, "").toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60).replace(/-+$/g, "");
+      return s || fallback;
+    }
+
+    // YAML single-quoted string: a single quote is written twice.
+    function yaml(text) {
+      return "'" + String(text).replace(/'/g, "''") + "'";
+    }
+
+    function newFileLink(dir, name, body) {
+      return "https://github.com/" + REPO + "/new/" + BRANCH + "?filename=" + dir + "/" + encodeURIComponent(name) + "&value=" + encodeURIComponent(body);
+    }
+
+    var titleInput = document.getElementById("pub-title");
+
+    function update() {
+      var day = today();
+      var title = titleInput.value.trim();
+      var post = [
+        "---",
+        "layout: post",
+        "title: " + yaml(title || "Your title here"),
+        "date: " + day,
+        "description: " + yaml("One sentence that appears under the title on the blog page."),
+        "tags: health-economics",
+        "categories: general",
+        "---",
+        "",
+        "Write your post here. Leave a blank line between paragraphs.",
+        "",
+      ].join("\n");
+      var news = [
+        "---",
+        "layout: post",
+        "date: " + day,
+        "inline: true",
+        "related_posts: false",
+        "---",
+        "",
+        "Write one or two sentences here. **Bold** and [links](https://example.com) work.",
+        "",
+      ].join("\n");
+      document.getElementById("pub-new-post").href = newFileLink("_posts", day + "-" + slug(title, "new-post") + ".md", post);
+      document.getElementById("pub-new-news").href = newFileLink("_news", day + "-" + slug(title, "news") + ".md", news);
+    }
+
+    titleInput.addEventListener("input", update);
+    update();
+
+    // If the owner has signed in to the optional editor on this browser, show it open.
+    try {
+      if (localStorage.getItem("siteEditor.token") || sessionStorage.getItem("siteEditor.token")) {
+        document.getElementById("pub-editor").open = true;
+      }
+    } catch (e) {}
+  })();
+</script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Shan Jiang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. Last updated: November 14, 2026. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
