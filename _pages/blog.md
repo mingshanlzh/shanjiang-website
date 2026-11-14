@@ -4,6 +4,7 @@ permalink: /blog/
 title: blog
 nav: false
 nav_order: 1
+site_editor: posts
 pagination:
   enabled: true
   collection: posts
@@ -28,6 +29,8 @@ pagination:
     <h2>{{ site.blog_description }}</h2>
   </div>
   {% endif %}
+
+  <div id="site-editor-toolbar"></div>
 
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 
