@@ -1,0 +1,304 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> site editor | Shan Jiang </title> <meta name="author" content="Shan Jiang"> <meta name="description" content="Add, edit and delete news items and blog posts."> <meta name="keywords" content="health economics, distributional cost-effectiveness analysis, DCEA, health technology assessment, genomics, discrete choice experiment, Deakin Health Economics, Deakin University"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.png?v=bd45bdec732b776122e82678d9380443"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://shanjiang.info/admin/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Shan</span> Jiang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">research </a> </li> <li class="nav-item "> <a class="nav-link" href="/talks/">talks </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">more </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/teaching/">teaching &amp; service</a> <a class="dropdown-item " href="/news/">news</a> <a class="dropdown-item " href="/blog/">blog</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/people/">people</a> <a class="dropdown-item " href="/repositories/">repositories</a> </div> </li> <li class="nav-item "> <a class="nav-link" href="/contact/">contact </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> <script>
+  // Two-state (light/dark only) theme toggle. Overrides the theme's 3-state cycle
+  // by rebinding the toggle button and forcing a concrete data-theme-setting.
+  (function () {
+    var d = document.documentElement;
+    function setTheme(t) {
+      localStorage.setItem("theme", t);
+      d.setAttribute("data-theme", t);
+      d.setAttribute("data-theme-setting", t);
+    }
+    function current() { return localStorage.getItem("theme") === "dark" ? "dark" : "light"; }
+    setTheme(current()); // never leave it on "system"
+    document.addEventListener("DOMContentLoaded", function () {
+      var btn = document.getElementById("light-toggle");
+      if (!btn) return;
+      var clone = btn.cloneNode(true);
+      btn.parentNode.replaceChild(clone, btn);
+      clone.addEventListener("click", function () {
+        setTheme(current() === "dark" ? "light" : "dark");
+      });
+    });
+  })();
+</script> <script>
+  // Keep the search button icon-only. The al_search plugin rewrites this button on
+  // Macs to add a keyboard hint (on "readystatechange"); DOMContentLoaded fires after
+  // that, so resetting here removes the hint on every platform.
+  document.addEventListener("DOMContentLoaded", function () {
+    var searchLabel = document.querySelector("#search-toggle .nav-link");
+    if (searchLabel) searchLabel.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+  });
+</script> <script>
+  // DOI dropdown toggle for publication entries (mirrors Abs/Bib behaviour)
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("a.doi-toggle").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        var scope = link.closest(".links") ? link.closest(".links").parentElement : link.closest("li, .row");
+        if (!scope) return;
+        var panel = scope.querySelector(".doi-content.hidden");
+        if (panel) panel.classList.toggle("open");
+      });
+    });
+  });
+</script> <style>
+  .doi-content { max-height: 0; overflow: hidden; transition: all 0.15s ease; font-size: 0.875rem; }
+  .doi-content.open { max-height: 20em; }
+  .doi-content p { line-height: 1.4em; margin: 10px; }
+  div.doi-content { border: dashed 1px var(--global-divider-color); }
+  div.doi-content.open { border-color: var(--global-text-color); }
+</style> <script>
+      window.SITE_EDITOR_CONFIG = {
+        repo: "mingshanlzh/shanjiang-website",
+        branch: "main",
+        adminUrl: "/admin/",
+        page: { kind: "admin", path: "_pages/admin.md" }
+      };
+    </script> <script src="/assets/js/site-editor.js?v=1794641887" defer></script> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">site editor</h1> <p class="post-description">Add, edit and delete news items and blog posts.</p> </header> <article> <div id="site-editor-admin"> <p>Loading the editor…</p> </div> <noscript>The site editor needs JavaScript.</noscript> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Shan Jiang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. Last updated: November 14, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "publications by categories in reversed chronological order. generated by jekyll-scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-research",
+          title: "research",
+          description: "My research programme sits at the intersection of health economics, equity, and precision medicine.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-talks",
+          title: "talks",
+          description: "Selected invited seminars and conference presentations.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/talks/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Curriculum vitae. A full PDF is available via the download button above.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "dropdown-teaching-amp-service",
+              title: "teaching &amp; service",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/";
+              },
+            },{id: "dropdown-news",
+              title: "news",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/news/";
+              },
+            },{id: "dropdown-blog",
+              title: "blog",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/blog/";
+              },
+            },{id: "dropdown-people",
+              title: "people",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/people/";
+              },
+            },{id: "dropdown-repositories",
+              title: "repositories",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/repositories/";
+              },
+            },{id: "nav-contact",
+          title: "contact",
+          description: "Get in touch.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/contact/";
+          },
+        },{id: "post-welcome-to-my-new-website",
+        
+          title: "Welcome to my new website",
+        
+        description: "A short note on the new site and what I plan to write about here.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/welcome/";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "news-commenced-my-phd-in-economics-at-the-macquarie-university-centre-for-the-health-economy-muche-developing-dynamic-methods-for-distributional-cost-effectiveness-analysis",
+          title: 'Commenced my PhD in Economics at the Macquarie University Centre for the Health...',
+          description: "",
+          section: "News",},{id: "news-our-paper-on-indication-specific-value-based-pricing-was-selected-as-best-paper-of-the-year-2024-by-the-value-in-health-editorial-board-the-only-one-worldwide",
+          title: 'Our paper on indication-specific value-based pricing was selected as Best Paper of the...',
+          description: "",
+          section: "News",},{id: "news-presented-four-papers-and-led-an-organised-session-on-equity-informative-economic-evaluation-at-the-ihea-world-congress-2025-in-bali-indonesia",
+          title: 'Presented four papers and led an organised session on equity-informative economic evaluation at...',
+          description: "",
+          section: "News",},{id: "news-honoured-to-be-named-student-of-the-year-by-the-australian-institute-of-health-innovation-aihi-macquarie-university-my-ahes-2025-abstract-was-also-selected-among-the-best-10-doctoral-research",
+          title: 'Honoured to be named Student of the Year by the Australian Institute of...',
+          description: "",
+          section: "News",},{id: "news-gave-a-long-oral-presentation-on-dynamic-dcea-at-the-ispor-australian-chapter-annual-meeting-sydney",
+          title: 'Gave a long oral presentation on Dynamic DCEA at the ISPOR Australian Chapter...',
+          description: "",
+          section: "News",},{id: "news-visiting-the-danish-centre-for-health-economics-dache-university-of-southern-denmark-presenting-work-on-projected-quality-adjusted-life-expectancy-via-dynamic-microsimulation",
+          title: 'Visiting the Danish Centre for Health Economics (DaCHE), University of Southern Denmark, presenting...',
+          description: "",
+          section: "News",},{id: "news-began-my-fully-funded-brocher-foundation-research-visiting-fellowship-in-geneva-with-seminars-on-genomics-equity-and-dynamic-dcea",
+          title: 'Began my fully funded Brocher Foundation Research Visiting Fellowship in Geneva, with seminars...',
+          description: "",
+          section: "News",},{id: "news-delivered-an-invited-seminar-on-dynamic-distributional-cost-effectiveness-analysis-at-the-centre-for-health-economics-university-of-york",
+          title: 'Delivered an invited seminar on Dynamic Distributional Cost-Effectiveness Analysis at the Centre for...',
+          description: "",
+          section: "News",},{id: "news-started-as-a-research-fellow-at-deakin-health-economics-institute-for-health-transformation-deakin-university-melbourne",
+          title: 'Started as a Research Fellow at Deakin Health Economics, Institute for Health Transformation,...',
+          description: "",
+          section: "News",},{id: "news-presented-at-the-15th-australian-health-economics-doctoral-ahed-workshop-and-the-47th-ahes-annual-conference-in-hobart-including-a-talk-on-projecting-quality-adjusted-life-expectancy-for-distributional-cost-effectiveness-analysis-with-dynamic-microsimulation",
+          title: 'Presented at the 15th Australian Health Economics Doctoral (AHED) Workshop and the 47th...',
+          description: "",
+          section: "News",},{id: "news-awarded-a-seed-grant-from-the-nhmrc-centre-of-research-excellence-in-achieving-health-equity-for-all-people-with-disabilities-ahead",
+          title: 'Awarded a seed grant from the NHMRC Centre of Research Excellence in Achieving...',
+          description: "",
+          section: "News",},{id: "projects-dynamic-distributional-cost-effectiveness-analysis",
+          title: 'Dynamic Distributional Cost-Effectiveness Analysis',
+          description: "Tracking cost-effectiveness and health inequality over time across multiple birth cohorts — the core of my PhD thesis.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_ddcea/";
+            },},{id: "projects-economics-of-genomics-amp-precision-medicine",
+          title: 'Economics of Genomics &amp;amp; Precision Medicine',
+          description: "Evaluating population genomic screening, secondary findings disclosure, and hereditary cancer prevention.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_genomics/";
+            },},{id: "projects-stated-preferences-amp-discrete-choice-experiments",
+          title: 'Stated Preferences &amp;amp; Discrete Choice Experiments',
+          description: "Eliciting patient, public, and decision-maker preferences to inform equity-sensitive resource allocation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_preferences/";
+            },},{id: "projects-health-technology-assessment-amp-methods-for-equity",
+          title: 'Health Technology Assessment &amp;amp; Methods for Equity',
+          description: "Building the methodological infrastructure for equity-informative economic evaluation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_hta/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/cv/", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%73%68%61%6E.%6A%69%61%6E%67@%64%65%61%6B%69%6E.%65%64%75.%61%75", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=TeSuUycAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0003-1015-1278", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/mingshanlzh", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/ShanJiangHE", "_blank");
+        },
+      },{
+        id: 'social-researchgate',
+        title: 'ResearchGate',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Shan-Jiang-46/", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
