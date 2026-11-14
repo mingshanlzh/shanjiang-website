@@ -18,6 +18,7 @@ nav_order: 4
 
 ## Conference Presentations (selected)
 
+- **Projecting Quality-Adjusted Life Expectancy for Distributional Cost-Effectiveness Analysis: A Dynamic Microsimulation Approach** — AHES Annual Conference, Hobart (Sep 2026).
 - **Dynamic DCEA** [Long Oral] — ISPOR Australian Chapter Annual Meeting, Sydney (Dec 2025).
 - **Dynamic DCEA for Genomic Breast Cancer Screening** — AHES Annual Conference, Canberra (Sep 2025) — *selected among Best 10 Doctoral Research*.
 - Four presentations and a lead **organised session** on equity-informative economic evaluation — **iHEA World Congress 2025**, Bali (Jul 2025).
