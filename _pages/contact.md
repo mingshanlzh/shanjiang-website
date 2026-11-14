@@ -7,7 +7,7 @@ nav: true
 nav_order: 7
 ---
 
-The best way to reach me is by email at **[shan.jiang@mq.edu.au](mailto:shan.jiang@mq.edu.au)**. You can also use the form below — messages are delivered straight to my inbox.
+The best way to reach me is by email at **[shan.jiang@deakin.edu.au](mailto:shan.jiang@deakin.edu.au)**. You can also use the form below — messages are delivered straight to my inbox.
 
 <form id="contact-form" style="max-width: 34rem;">
   <div style="margin-bottom: 1rem;">
