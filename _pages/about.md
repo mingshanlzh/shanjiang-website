@@ -27,10 +27,10 @@ latest_posts:
   limit: 3
 ---
 
-I am a health economist and Research Fellow at **Deakin Health Economics**, Institute for Health Transformation, Deakin University, Melbourne. I work on **equity-informed economic evaluation**, **distributional cost-effectiveness analysis (DCEA)**, the **economics of genomics and precision medicine**, **health technology assessment (HTA)**, and **stated-preference methods**.
+I am a health economist and Research Fellow at **Deakin Health Economics**, Institute for Health Transformation, Deakin University, Melbourne. I work on **model- and trial-based cost-effectiveness analysis (CEA)**, **equity-informative economic evaluation**, especially **distributional cost-effectiveness analysis (DCEA)**, the **economics of genomics and precision medicine**, and **stated-preference methods**.
 
-My research builds decision tools that assess not only how much health a programme produces, but *who benefits, who is missed, and how fairness evolves over time*. My PhD at Macquarie University develops **DCEA with uptake dynamics (DCEA-UD)**, which models how unequal uptake of new health technologies across socioeconomic groups shapes health inequality over time. It is supervised by [A/Prof Yuanyuan Gu](https://researchers.mq.edu.au/en/persons/yuanyuan-gu) and [A/Prof Bonny Parkinson](https://researchers.mq.edu.au/en/persons/bonny-parkinson).
+My research builds decision tools that assess not only how much health a programme produces, but *who benefits, who is missed, and how fairness evolves over time*. My PhD in Health Economics at Macquarie University develops dynamic methods for DCEA. I have published more than 50 peer-reviewed papers in journals including *JAMA Network Open*, *Genetics in Medicine*, *BMJ Global Health*, *Value in Health*, and *PharmacoEconomics*.
 
-Before moving to Australia, my career spanned international research training (UBC, MIT, Columbia), independent health technology assessment consulting, public science communication, and policy-facing health economics in China. I also serve as an Adjunct Research Fellow at the Shanghai Health Development Research Center, as Section Editor (HEOR) of *Advances in Therapy*, and as Convenor of the Health Equity Special Interest Group of the Australian Health Economics Society.
+I also serve as an Adjunct Research Fellow at the Shanghai Health Development Research Center, as Section Editor (HEOR) of *Advances in Therapy*, and as Convenor of the Health Equity Special Interest Group of the Australian Health Economics Society.
 
 My work has been recognised with the *Value in Health* **Best Paper of the Year 2024**, the AIHI **Student of the Year 2025**, and a fully funded **Brocher Foundation Research Visiting Fellowship** (Geneva, 2026).
