@@ -1,14 +1,14 @@
 cv:
   name: Shan Jiang
   label: Health Economist
-  email: shan.jiang@mq.edu.au
-  location: Sydney, Australia
+  email: shan.jiang@deakin.edu.au
+  location: Melbourne, Australia
   image: ""
   summary: >
-    Health economist specialising in equity-informed economic evaluation, distributional
-    and dynamic distributional cost-effectiveness analysis (DCEA / D-DCEA), the economics
-    of genomics and precision medicine, health technology assessment, and stated-preference
-    methods.
+    Health economist and Research Fellow at Deakin Health Economics, Deakin University,
+    specialising in equity-informed economic evaluation, distributional cost-effectiveness
+    analysis (DCEA), including DCEA with uptake dynamics (DCEA-UD), the economics of genomics
+    and precision medicine, health technology assessment, and stated-preference methods.
 
   social_networks:
     - network: Google Scholar
@@ -80,6 +80,12 @@ cv:
         end_date: 2011
 
     Experience:
+      - company: Deakin Health Economics, Institute for Health Transformation, Deakin University
+        position: Research Fellow
+        location: Melbourne, Australia
+        start_date: 2026-07-27
+        end_date: present
+
       - company: Macquarie University Centre for the Health Economy (MUCHE)
         position: Senior Research Assistant
         location: Sydney, Australia
@@ -108,6 +114,9 @@ cv:
         end_date: 2016
 
     Grants, Awards & Fellowships:
+      - title: Seed Grant
+        awarder: NHMRC Centre of Research Excellence in Achieving Health Equity for All People with Disabilities (AHEAD)
+        date: 2026
       - title: Research Visiting Fellowship (full funding)
         awarder: Brocher Foundation, Geneva, Switzerland
         date: 2026
